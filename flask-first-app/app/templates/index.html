@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block content %}
+        <h1>Hello, <b>{{name}}</b></h1>
+        <blockquote>I hope you like here. Above is list of my favourite movies</blockquote>
+        {% for movie in movies %}
+        <p>{{movie.author}}: <i>{{movie.title}}</i></p>
+        {% endfor %}
+
+{% endblock %}
+

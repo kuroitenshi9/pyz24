@@ -1,0 +1,10 @@
+{% extends "_base.html" %}
+{% block content %}
+{% for art in articles %}
+    <article>
+        <h2>{{art.title}}</h2>
+        <h4>Author: {{art.author.nickname}}</h4>
+        <p>{{art.body}}</p>
+    </article>
+{% endfor %}
+{% endblock %}
