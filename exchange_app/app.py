@@ -1,12 +1,10 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from app.app_init import create_app
 
-app = Flask(__name__)
+app = create_app()
 
-app.config.from_object('config.Config')
-db = SQLAlchemy()
-
-db.init_app(app)
+@app.route('/')
+def home():
+    return '<h1>HELLO!</h1>'
 
 if __name__ == '__main__':
     app.run(debug=True)
