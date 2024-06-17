@@ -6,4 +6,5 @@ class Product(db.Model):
     name = db.Column(db.String(50), nullable=False )
     price_usd = db.Column(db.Float, nullable=False)
     price_pln = db.Column(db.Float)
-    last_update = db.Column(db.DateTime, )
+    last_update = db.Column(db.DateTime, default=datetime.uctnow())
+    source = db.Column(db.String(30), nullable=True)
